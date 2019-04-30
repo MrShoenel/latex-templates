@@ -4,12 +4,13 @@
 % https://www.overleaf.com/learn/latex/Biblatex_bibliography_styles
 % https://tex.stackexchange.com/questions/1554/biblatex-displaying-all-authors-of-multi-author-works-in-the-bibliography#answer-1557
 \usepackage[backend=biber,style=authoryear,natbib=true,maxbibnames=99,maxcitenames=2]{biblatex}
-\usepackage{enumitem}							% So we can use topsep, itemsep etc. on itemize
-\usepackage{xcolor}							% specify colors by name (e.g. "red")
-\usepackage{hyperref}							% clickable URls and cross-references
+\usepackage{enumitem}				% So we can use topsep, itemsep etc. on itemize
+\usepackage{nameref}				% So we can refer to sections w/o numbers, using \nameref
+\usepackage{xcolor}				% specify colors by name (e.g. "red")
+\usepackage{hyperref}				% clickable URls and cross-references
 \hypersetup{
 	colorlinks=true,
-	pdfborderstyle={/S/U/W 1},					% underline links instead of boxes
+	pdfborderstyle={/S/U/W 1},		% underline links instead of boxes
 	allcolors=[rgb]{0.5,0,0}
 }
 \addbibresource{refs.bib}
