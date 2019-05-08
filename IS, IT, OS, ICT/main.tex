@@ -20,6 +20,18 @@
 \author{Sebastian Hönel}
 \date{\today}
 
+\DeclareCiteCommand{\citeyear}			% Makes the year a hyperref, when using \citeyear (and not \citep)
+    {}
+    {\bibhyperref{\printdate}}
+    {\multicitedelim}
+    {}
+
+\DeclareCiteCommand{\citeyearpar}
+    {}
+    {\mkbibparens{\bibhyperref{\printdate}}}
+    {\multicitedelim}
+    {}
+
 \begin{document}
 
 \maketitle
