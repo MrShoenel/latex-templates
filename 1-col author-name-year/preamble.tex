@@ -1,0 +1,25 @@
+\hypersetup{
+    colorlinks=true,
+    pdfborderstyle={/S/U/W 1},  % underline links instead of boxes
+	allcolors=[rgb]{0.5,0,0}
+}
+\urlstyle{rm}                   % To match the style of \href
+
+\addbibresource{refs.bib}
+\newcommand\DEFAULTSTRETCH{1.2}
+\setstretch{\DEFAULTSTRETCH}
+
+\DeclareCiteCommand{\citeyear}			% Makes the year a hyperref, when using \citeyear (and not \citep)
+    {}
+    {\bibhyperref{\printdate}}
+    {\multicitedelim}
+    {}
+
+\DeclareCiteCommand{\citeyearpar}
+    {}
+    {\mkbibparens{\bibhyperref{\printdate}}}
+    {\multicitedelim}
+    {}
+
+% Creates a new cite-command that looks like "Author (1986)"
+\newcommand{\citenameandyear}[1]{\citeauthor{#1}~(\citeyear{#1})}

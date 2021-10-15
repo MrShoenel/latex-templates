@@ -1,0 +1,67 @@
+\documentclass[10pt,a4paper,egregdoesnotlikesansseriftitles]{scrartcl}
+\usepackage[backend=biber,style=authoryear,natbib=true,maxbibnames=99,maxcitenames=2]{biblatex}
+\usepackage[left=2.5cm,right=2.5cm,top=2cm,bottom=2cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{lipsum}
+\usepackage{enumitem}			% So we can use topsep, itemsep, etc. on itemize
+\usepackage{ragged2e}			% So that we can re-set the text alignment, using e.g. \justify
+\usepackage{nameref}			% So we can refer to sections w/o numbers, using \nameref
+\usepackage{xcolor}				% specify colors by name (e.g. "red")
+\usepackage{dingbat}            % For dingbat hands
+\usepackage{mathtools}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+%\usepackage{layouts}           % Comment-in to get text-width
+\usepackage{tikz}
+\usepackage{bm}
+\usepackage{xcolor}
+\usepackage{setspace}           % for \setstretch
+\usepackage{caption}            % Jump to figures, not their caption
+\usepackage{url}
+\usepackage{hyperref}			% clickable URLs and cross-references
+\input{preamble}
+
+
+\title{One-column Assignment with author-name-year cite-style}
+\author{Sebastian Hönel}
+\date{\today}
+
+
+\begin{document}
+\maketitle
+
+\noindent Jump to:\;\;\leftpointright\,\hyperref[sec:q1]{\nameref{sec:q1}},\;\;\leftpointright\,\hyperref[sec:refs]{References}
+
+\section*{Introduction}
+%
+%\printinunitsof{in}\prntlen{\textwidth}
+%
+Lorem~\citep{kellogg2006life}. Also, \citeauthor{deriso2019general} used foo. Then,~\citenameandyear{nielsen1998aligning} did bla. Some more text to get second line.
+
+\lipsum[1]
+
+
+\section*{Foo Bla}
+\lipsum[1-3]
+
+
+
+\section*{Question 1}\label{sec:q1}
+%\addcontentsline{toc}{section}{Question 1}
+\setstretch{0.9}
+\small
+\textit{Human and social action involves intentionality. What does intentionality mean in a social science context? Suggest implications of intentionality for the social scientist that wants to explain action.}
+
+\noindent\rule{\textwidth}{.8pt}
+
+\normalsize
+\setstretch{\DEFAULTSTRETCH}
+
+\vspace{1em}\noindent\lipsum[1]
+
+
+
+\printbibliography[heading=subbibintoc]\label{sec:refs}
+
+\end{document}
